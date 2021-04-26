@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.txt": "plaintext",
+        "*.html": "html",
+        "random": "cpp"
+    }
+}
