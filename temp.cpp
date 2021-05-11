@@ -1,22 +1,48 @@
 #include <iostream>
-#include <algorithm>
-#include <vector>
-
 using namespace std;
+
+int isPalindrome(long int arr[], int n)
+{
+    for (int i = 0; i < n / 2; i++)
+    {
+        if (arr[i] != arr[n - 1 - i])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
 
 int main()
 {
-    int arr1[] = {1, 3, 4, 5, 7}, arr2[] = {0, 2, 6, 8, 9}, i, n = sizeof(arr1)/sizeof(arr1[0]), un[n], in = {};
-    bool exists;
-    copy(arr1, arr1+n, un);
-    
-    
-    exists = any_of(begin(arr1), end(arr1), [&](int i) { return i == 4; });
-    string a = exists?"True":"False";
-    cout << a << endl;
-    for (i = 0; i < n; i++)
+    int M, N, R = 0, C = 0;
+    cin >> M >> N;
+    long int A[M][N];
+    long int temp[M];
+    for (int i = 0; i < M; i++)
     {
-        cout << arr1[i] << " ";
+        for (int j = 0; j < N; j++)
+        {
+            cin >> A[i][j];
+        }
     }
-    cout << "\n";
+    for (int i = 0; i < M; i++)
+    {
+        if (isPalindrome(A[i], N))
+        {
+            R++;
+        }
+    }
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < M; j++)
+        {
+            temp[j] = A[j][i];
+        }
+        if (isPalindrome(temp, M))
+        {
+            C++;
+        }
+    }
+    cout << R << " " << C << "\n";
 }
