@@ -52,7 +52,7 @@ int main(){
     showForwardList(f_list);
 
     // method-3 same number n times
-    f_list.assign(7, 3);
+    f_list.assign(7, 3); // (n, val)
     showForwardList(f_list);
 
     // inserting new element after a position

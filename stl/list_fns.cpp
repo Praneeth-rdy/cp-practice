@@ -66,7 +66,7 @@ int main(){
 }
 
 /*
-Operations of iterators which alos work on lists:
+Operations of iterators which also work on lists:
 list.begin()
 list.end()
 advance(itr, n)
