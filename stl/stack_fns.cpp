@@ -37,3 +37,5 @@ int main(){
 
     return 0;
 }
+
+// Stacks and queues do not have iterators because the concept of stacks and queues is that we can access elements only at the end of the containers
