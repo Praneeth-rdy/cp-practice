@@ -53,3 +53,8 @@ int main(){
 
     return 0;
 }
+
+// Average Case TC O(nlogn)
+// Best Case TC O(nlogn)
+// Worst Case time complexity O(nlogn)
+// Auxilliary Space O(n)

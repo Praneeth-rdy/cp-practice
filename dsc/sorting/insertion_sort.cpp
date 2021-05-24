@@ -35,6 +35,7 @@ int main(){
 // Best case: O(n)
 // Worst case: O(n^2)
 // Average Case: O(n^2)
+// Auxilliary space: O(1) for the key variable used
 
 // In insertion sort for nearly sorted array where each element is atmost k positions away from its target position,
 // time complexity to move each element k positions is O(k) and the array has n elements. So, time complexity becomes O(nk). Fpr small values of constant k, we can take it as O(n)
