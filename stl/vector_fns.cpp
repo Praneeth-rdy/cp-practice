@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void showVector(vector<int> myvector){
+void show_vector(vector<int> myvector){
     vector<int>::iterator itr = myvector.begin();
 
     while(itr != myvector.end()){
@@ -17,9 +17,9 @@ int main(){
     vector<int> myvector1 = {1, 2, 3};
     vector<int> myvector2(3, 77);
     vector<int> myvector3(myvector2.begin(), myvector2.end());
-    showVector(myvector1);
-    showVector(myvector2);
-    showVector(myvector3);
+    show_vector(myvector1);
+    show_vector(myvector2);
+    show_vector(myvector3);
     
     return 1;
 }

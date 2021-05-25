@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void showArray(array<int, 5> myarray){
+void show_array(array<int, 5> myarray){
     array<int, 5>::iterator itr = myarray.begin();
 
     while(itr != myarray.end()){
@@ -15,7 +15,7 @@ void showArray(array<int, 5> myarray){
 
 int main(){
     array<int, 5> myarray = {1, 2, 3, 4, 5};
-    showArray(myarray);
+    show_array(myarray);
 
     // indexing is allowed in arrays
     cout << myarray[2] << "\n";

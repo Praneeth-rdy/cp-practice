@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void showQueue(queue<int> q){
+void show_queue(queue<int> q){
     while(!q.empty()){
         cout << q.front() << " ";
         q.pop();
@@ -19,7 +19,7 @@ int main(){
     q.push(20);
     q.push(30);
 
-    showQueue(q);
+    show_queue(q);
     // getting last or the newest element of queue
     cout << q.back() << "\n";
 
@@ -29,7 +29,7 @@ int main(){
     // dequeue an element from the queue
     q.pop();
 
-    showQueue(q);
+    show_queue(q);
 
     // checking if a queue is empty
     cout << "is_empty? " << q.empty() << "\n";

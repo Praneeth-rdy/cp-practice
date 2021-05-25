@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void showList(list<int> mylist){
+void show_list(list<int> mylist){
     list<int>::iterator itr = mylist.begin();
 
     while(itr != mylist.end()){
@@ -18,9 +18,9 @@ int main(){
     list<int> mylist1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     list<int> mylist2(3, 77); // 3 elements with value 77
     list<int> mylist3(mylist2.begin(), mylist2.end());
-    showList(mylist1);
-    showList(mylist2);
-    showList(mylist3);
+    show_list(mylist1);
+    show_list(mylist2);
+    show_list(mylist3);
 
 
     // Inserting element in last position in a list
@@ -34,30 +34,30 @@ int main(){
     cout << mylist2.back() << "\n";
 
     mylist2.pop_back();
-    showList(mylist2);
+    show_list(mylist2);
 
 
     // insert() method of lists works similar to that of insert_after() function in the forward lists with few differences
     // 1) This function inserts new elements before the element at the specified position
     // 2) returns an iterator that points to the first of the newly inserted elements
-    showList(mylist3);
+    show_list(mylist3);
     mylist3.insert(mylist3.begin(), 2);
-    showList(mylist3);
+    show_list(mylist3);
     mylist3.insert(mylist3.begin(), 3, 20); // inserts 20, 3 times before the first element
     // mylist3.insert(inserting_pos, ref_list.begin(), ref_list.end())
-    showList(mylist3);
+    show_list(mylist3);
     mylist3.insert(next(mylist3.begin(), 4), {1, 2, 3});
-    showList(mylist3);
+    show_list(mylist3);
 
 
     // erasing the elements
     // erase() returns an iterator that points to the next element after the erased elements
     mylist3.erase(mylist3.begin());
-    showList(mylist3);
+    show_list(mylist3);
 
     // erasing range of elements
     mylist3.erase(mylist3.begin(), next(mylist3.end(), 6));
-    showList(mylist3);
+    show_list(mylist3);
 
     // number of elements in a list
 

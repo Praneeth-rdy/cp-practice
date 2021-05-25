@@ -4,7 +4,7 @@
 using namespace std;
 
 // pass by value
-void showStack(stack<int> s){
+void show_stack(stack<int> s){
     while(!s.empty()){
         cout << s.top() << " ";
         s.pop();
@@ -20,7 +20,7 @@ int main(){
     s.push(20);
     s.push(30);
 
-    showStack(s);
+    show_stack(s);
     // getting the top element from the stack
     cout << "Top: " << s.top() << "\n";
 
