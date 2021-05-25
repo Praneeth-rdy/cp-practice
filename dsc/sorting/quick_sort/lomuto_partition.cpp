@@ -28,7 +28,7 @@ int partition(int arr[], int lo, int hi){
 
 
 // lo and hi are indices. hi is not the size of the array
-void quickSort(int arr[], int lo, int hi){
+void quick_sort(int arr[], int lo, int hi){
     int pivot;
     if(lo < hi){
         // Dividing the array into two parts with respect to pivot
@@ -36,9 +36,9 @@ void quickSort(int arr[], int lo, int hi){
         // And the remain on the right
         pivot = partition(arr, lo, hi);
         // Recursively sorting the left elements of pivot [lo, pivot)
-        quickSort(arr, lo, pivot-1);
+        quick_sort(arr, lo, pivot-1);
         // Recursively sorting the right elements of pivot (pivot, hi]
-        quickSort(arr, pivot+1, hi);
+        quick_sort(arr, pivot+1, hi);
     }
 }
 
@@ -46,7 +46,7 @@ int main(){
     int arr[] = {4, 5, 3, 7, 10, 22, 2, 8}, n;
     n = sizeof(arr)/sizeof(arr[0]);
 
-    quickSort(arr, 0, n-1);
+    quick_sort(arr, 0, n-1);
     for(int i = 0; i < n; i++)
         cout << arr[i] << " ";
     cout << "\n";
