@@ -91,4 +91,6 @@ int main(){
 /*
 The maximum height of the tree is ceiling(logn) i.e. number of levels in a heap
 ceiling(logn) => largest integer less than log(n) + 1;
+
+Insert and extract_max in heaps take O(logn) time complexity
 */
