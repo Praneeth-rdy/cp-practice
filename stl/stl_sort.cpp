@@ -41,3 +41,5 @@ So the function we pass to sort as argument should satisfy the requirements of c
 3) if function(a, b) == true, function(b, a) == false
 4) if function(a, b) and function(b, c) are true, then function(a, c) == true
 */
+
+// stl list has its own sorting method. We cannot use this sort function in case of lists as they are bidirectional
