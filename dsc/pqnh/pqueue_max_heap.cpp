@@ -58,6 +58,21 @@ item extract_max(vector<item> &max_heap){
     return max;
 }
 
+void bottom_up_heapify(vector<item> &max_heap, int i){
+    item temp;
+    while(i > 1 && max_heap[i/2].priority < max_heap[i].priority){
+        temp = max_heap[i/2];
+        max_heap[i/2] = max_heap[i];
+        max_heap[i] = temp;
+        i = i/2;
+    }
+}
+
+void insert_max(vector<item> &max_heap, item insert_item){
+    max_heap.push_back(insert_item);
+    bottom_up_heapify(max_heap, max_heap.size()-1);
+}
+
 int main(){
     vector<item> max_heap = {{0, 0, "not counted"}, {5, 1, "five"}, {3, 0, "three"}, {2, 3, "two"}, {7, 5, "seven"}, {8, 6, "eight"}};
 
@@ -65,7 +80,12 @@ int main(){
     sort(next(max_heap.begin(), 1), max_heap.end(), item_comp);
     build_max_heap(max_heap);
     show_vector(max_heap);
+    extract_max(max_heap);
+    show_vector(max_heap);
+    insert_max(max_heap, {8, 6, "eight"});
+    show_vector(max_heap);
 
+    return 0;
 }
 
 /*
