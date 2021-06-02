@@ -27,11 +27,11 @@ void show_vector(vector<item> myvector){
 void max_heapify(vector<item> &max_heap, int i){
     int left = 2*i, right = 2*i + 1, largest;
     item temp;
-    if (left <= max_heap.size() && max_heap[left].priority > max_heap[i].priority)
+    if (left <= max_heap.size()-1 && max_heap[left].priority > max_heap[i].priority)
         largest = left;
     else
         largest = i;
-    if (right <= max_heap.size() && max_heap[right].priority > max_heap[largest].priority)
+    if (right <= max_heap.size()-1 && max_heap[right].priority > max_heap[largest].priority)
         largest = right;
     if(largest != i){
         temp = max_heap[i];
