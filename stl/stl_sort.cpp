@@ -43,3 +43,5 @@ So the function we pass to sort as argument should satisfy the requirements of c
 */
 
 // stl list has its own sorting method. We cannot use this sort function in case of lists as they are bidirectional
+
+// * The algorithm used by sort() is Introsort. Introsort is a hybrid algorithm which uses quick sort, heapsort and insertion sort to minimize running time

@@ -60,3 +60,16 @@ int main(){
     show_vector(arr);
     return 0;
 }
+
+/*
+heap_sort() time complexity: O(nlogn) in both best and worst cases though best case has a constant factor less time complexity
+worst case space complexity: O(logn) i.e. occupied by max_heapify function. space occupied by build_max_heap is O(1).
+Properties:
+1) Internal Sorting Algo
+2) Not a stable sorting algo
+3) Inplace sorting algo (O(nlogn) space complexity is considered negligible as it is only due to function call stack)
+
+- use heapsort in situations that require a guarantee of response time as heapsort has guaranteed O(nlogn) time which is also better than worst case of quick sort
+- prefer quick sort over heapsort when you want max speed
+- you can use heapsort where n is large
+*/
